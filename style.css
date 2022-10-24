@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Josefin Sans';
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(52, 22, 113);
+    background: linear-gradient(90deg, rgba(52, 22, 113, 1) 0%, rgba(87, 36, 189, 1) 100%);
+}
+
+.calculadora {
+    width: 300px;
+    height: 500px;
+    background-color: #FFF;
+    padding: 0 20px 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+.calculadora_header h1 {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.calculadora_tela {
+    width: 100%;
+    background-color: #FFF;
+    height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding-right: 10px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.calculadora_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    width: 100%;
+    height: 70%;
+}
+
+.calculadora_buttons button {
+    background-color: #FFF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.09),
+        inset -10px -10px 10px #FFF,
+        2px 2px 2px rgba(0, 0, 0, 0.05);
+
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.calculadora_buttons button:hover {
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 10px #FFF;
+    font-weight: 600;
+}
+
+.calculadora_buttons_operador {
+    /* background-color: #341671 !important; */
+    color: rgba(87, 36, 189, 1) !important;
+    font-weight: 500 !important;
+}
+
+#igual,
+#clear {
+    background-color: rgba(87, 36, 189, 1);
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.3),
+        inset -10px -10px 10px rgba(87, 36, 189, 1) !important;
+    color: #FFF !important;
+}
+
+#igual {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.modal {
+    position: absolute;
+    /* top: -30px; */
+    top: -300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    transition: all 1s;
+}
+
+.modal_body {
+    min-width: 300px;
+    max-width: 300px;
+    height: 50px;
+    background-color: #FFF;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.modal_body img {
+    width: 45px;
+}
+
+.modal_body h1 {
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+@keyframes erroTela {
+    0%{
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(4px, 0);
+    }
+
+    100%{
+        transform: translate(-4px, 0);
+    }
+}

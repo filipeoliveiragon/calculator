@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <section class="calculadora">
+        <div class="calculadora_header">
+            <h1>Calculadora</h1>
+        </div>
+        <div class="calculadora_tela" id="calculadora_tela">
+            <h1 id="texto-tela">0</h1>
+        </div>
+        <div class="calculadora_buttons">
+            <button onclick="limparCalculadora()" class="calculadora_buttons_operador" id="clear">C</button>
+            <button onclick="operacao('!')" class="calculadora_buttons_operador">!</button>
+            <button onclick="operacao('/')" class="calculadora_buttons_operador">/</button>
+            <button onclick="operacao('*')" class="calculadora_buttons_operador">*</button>
+            <button onclick="adicionarNum(7)">7</button>
+            <button onclick="adicionarNum(8)">8</button>
+            <button onclick="adicionarNum(9)">9</button>
+            <button onclick="operacao('-')" class="calculadora_buttons_operador">-</button>
+            <button onclick="adicionarNum(4)">4</button>
+            <button onclick="adicionarNum(5)">5</button>
+            <button onclick="adicionarNum(6)">6</button>
+            <button onclick="operacao('+')" class="calculadora_buttons_operador">+</button>
+            <button onclick="adicionarNum(1)">1</button>
+            <button onclick="adicionarNum(2)">2</button>
+            <button onclick="adicionarNum(3)">3</button>
+            <button onclick="igual()" class="calculadora_buttons_operador" id="igual">=</button>
+            <button onclick="inverteSinal('+/-')" class="calculadora_buttons_operador">+/-</button>
+            <button onclick="adicionarNum(0)">0</button>
+            <button onclick="adicionarNum('.')" class="calculadora_buttons_operador">.</button>
+        </div>
+    </section>
+    <div class="modal" id="modal-error">
+        <div class="modal_body">
+            <img src="alert.png">
+            <h1 id="alert-text">Mensagem de erro</h1>
+        </div>
+    </div>
+</body>
+
+</html>
